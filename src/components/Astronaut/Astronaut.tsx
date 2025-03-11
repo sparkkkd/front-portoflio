@@ -23,7 +23,6 @@ type GLTFResult = GLTF & {
 
 export function Astronaut(props: JSX.IntrinsicElements['group']) {
 	const group = React.useRef<THREE.Group>(null)
-	// @ts-ignore
 	const { scene, animations } = useGLTF(
 		'front-portoflio/models/astronaut-transformed.glb'
 	)
