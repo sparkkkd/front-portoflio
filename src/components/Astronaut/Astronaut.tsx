@@ -23,7 +23,10 @@ type GLTFResult = GLTF & {
 
 export function Astronaut(props: JSX.IntrinsicElements['group']) {
 	const group = React.useRef<THREE.Group>(null)
-	const { scene, animations } = useGLTF('/models/astronaut-transformed.glb')
+	// @ts-ignore
+	const { scene, animations } = useGLTF(
+		'front-portoflio/models/astronaut-transformed.glb'
+	)
 	const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
 	//@ts-ignore
 	const { nodes, materials } = useGraph(clone) as GLTFResult
@@ -55,4 +58,4 @@ export function Astronaut(props: JSX.IntrinsicElements['group']) {
 	)
 }
 
-useGLTF.preload('/models/astronaut-transformed.glb')
+useGLTF.preload('front-portoflio/models/astronaut-transformed.glb')
