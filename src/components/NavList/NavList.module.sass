@@ -1,0 +1,21 @@
+.list
+	display: flex
+	gap: 20px
+
+.item
+	font-size: 21px
+	transition: filter .3s ease-in-out, text-shadow .3s
+
+// Media hover
+@media ( hover:hover )
+	.item:hover
+		filter: brightness(3)
+		text-shadow: 0 0 20px rgba(255, 255, 255, .5 )
+
+// Media screen
+@media screen and ( max-width: 404px )
+	.list
+		gap: 10px
+
+	.item
+		font-size: 16px
